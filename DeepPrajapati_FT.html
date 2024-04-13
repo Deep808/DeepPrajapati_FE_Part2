@@ -72,5 +72,16 @@
         cellCounter++;
       }
     }
+
+    function addingRow() {
+      let table = document.getElementById("myTable");
+      let newRow = table.insertRow(-1);
+      let rowCount = table.rows.length;
+      let colCount = table.rows[0].cells.length;
+      for (let i = 0; i < colCount; i++) {
+        let cell = newRow.insertCell(i);
+        cell.innerHTML = "(" + rowCount + "," + i + ")";
+      }
+    }
   </script>
 </html>
