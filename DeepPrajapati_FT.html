@@ -62,5 +62,15 @@
       document.getElementById("b2").style.display = "inline";
       document.getElementById("b3").style.display = "inline";
     }
+    function addingCol() {
+      let table = document.getElementById("myTable");
+      let rowCount = table.rows.length;
+      let colCount = table.rows[0].cells.length;
+      for (let i = 0; i < rowCount; i++) {
+        let cell = table.rows[i].insertCell(colCount);
+        cell.innerHTML = "(" + i + "," + colCount + ")";
+        cellCounter++;
+      }
+    }
   </script>
 </html>
